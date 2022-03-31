@@ -18,6 +18,11 @@ namespace Library
             this.id = id;
             this.cords = new Rectangle(new Point(cord_book_x, cord_book_y), new Size(30, 165));
         }
+        public bool IsHit(int x, int y)
+        {
+            Rectangle rc = cords;
+            return rc.Contains(x, y);
+        }
         public void Dispose()
         {
             GC.Collect(GC.GetGeneration(this.book_img));
