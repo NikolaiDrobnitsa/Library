@@ -118,7 +118,7 @@ namespace Library
                         show_book();
                     }
 
-                    MessageBox.Show(check_index.ToString());
+                    //MessageBox.Show(check_index.ToString());
                 }
                 //Book.cords.X.ToString();
             }

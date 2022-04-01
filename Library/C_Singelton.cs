@@ -45,5 +45,12 @@ namespace Library
             synth.Speak(Text_for_speak);
 
         }
+        public void stop()
+        {
+
+            synth.SpeakAsyncCancelAll();
+
+        }
+        
     }
 }

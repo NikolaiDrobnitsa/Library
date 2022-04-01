@@ -132,6 +132,7 @@ namespace Library
                 s1.someBusinessLogic(textBox1.Text);
                 s1.someBusinessLogic(textBox2.Text);
             }
+            
         }
 
         private void textBox2_ClientSizeChanged(object sender, EventArgs e)
@@ -152,6 +153,11 @@ namespace Library
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText("last_page.txt", Base_stream);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            s1.stop();
         }
     }
 }
