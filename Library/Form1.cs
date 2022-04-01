@@ -17,8 +17,10 @@ namespace Library
         public Form1()
         {
             InitializeComponent();
-            //if (File.Exists("books.txt"))
-            //    PathToFile.AddRange(File.ReadAllLines("books.txt"));
+            if (File.Exists("books.txt"))
+                PathToFile.AddRange(File.ReadAllLines("books.txt"));
+
+
         }
         public Image Book_img;
         private int x_point = 70;
@@ -48,7 +50,7 @@ namespace Library
                     }
                     if (book_collection.Count == 66)
                     {
-                        //MessageBox.Show("Вы достигли максимального количества книг!\nДля продолжения удалите любую книгу или купите ещё место!");
+                        
                         MessageBox.Show(
                     "Вы достигли максимального количества книг!\nДля продолжения удалите любую книгу или купите ещё место!",
                     "Ошибка",
@@ -111,7 +113,11 @@ namespace Library
                 if (Book.IsHit(e.X, e.Y))
                 {
                     check_index = book_collection.IndexOf(Book);
-                    show_book();
+                    if (activ_del == false)
+                    {
+                        show_book();
+                    }
+
                     MessageBox.Show(check_index.ToString());
                 }
                 //Book.cords.X.ToString();
