@@ -38,22 +38,25 @@ namespace Library
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(927, 466);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 87);
             this.button1.TabIndex = 0;
             this.button1.Text = "Добавить книгу";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Wheat;
             this.button2.Location = new System.Drawing.Point(141, 466);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 87);
             this.button2.TabIndex = 1;
             this.button2.Text = "Удалить книгу";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // imageList1
@@ -70,6 +73,7 @@ namespace Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1239, 619);
@@ -86,10 +90,9 @@ namespace Library
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

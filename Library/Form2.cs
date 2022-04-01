@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Speech.Synthesis;
 namespace Library
 {
+    
     public partial class Form2 : Form
     {
+        C_Singelton s1 = C_Singelton.GetInstance();
         public string num_book { get; set; }
         private int next_page = 41;
         static private bool check_end = false;
@@ -77,7 +79,7 @@ namespace Library
 
                 //label1.Text = "pos" + sr.BaseStream.Position.ToString() + "\nCHECK" + last_pos.ToString() + "\nres :" + result.ToString();
                 //label1.Text = Base_stream+"pos" + last_pos;
-                label1.Text ="back_page"+ back_page.ToString() + "\nbase" + Base_stream + "\nlast" + last_pos.ToString();
+                //label1.Text ="back_page"+ back_page.ToString() + "\nbase" + Base_stream + "\nlast" + last_pos.ToString();
             }
             if (check_end == false)
             {
@@ -98,7 +100,7 @@ namespace Library
 
         private void textBox1_MultilineChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
+            //MessageBox.Show("Test");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -125,7 +127,11 @@ namespace Library
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            if (!textBox1.Text.Equals(String.Empty))
+            {
+                s1.someBusinessLogic(textBox1.Text);
+                s1.someBusinessLogic(textBox2.Text);
+            }
         }
 
         private void textBox2_ClientSizeChanged(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Speech.Synthesis;
 
 namespace Library
 {
@@ -17,8 +17,8 @@ namespace Library
         public Form1()
         {
             InitializeComponent();
-            if (File.Exists("books.txt"))
-                PathToFile.AddRange(File.ReadAllLines("books.txt"));
+            //if (File.Exists("books.txt"))
+            //    PathToFile.AddRange(File.ReadAllLines("books.txt"));
 
 
         }
